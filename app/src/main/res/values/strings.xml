@@ -2,4 +2,11 @@
     <string name="app_name">Shoe Store</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="welcome_text_1">Welcome aboard! We are happy to have you here.</string>
+    <string name="welcome_text_2">A good place to start would be reading instructions. Click the button below to read instructions</string>
+    <string name="instructions_btn">Click Me</string>
+    <string name="instructions">From here, all you need to do is to click the button below.
+        You will be taken to a shoeList screen from where you can view a list of shoes available in the inventory.
+        You can also go ahead to add a shoe to the list by clicking the button in the bottom right corner
+        on the shoe list screen. \n That\'s it! </string>
 </resources>
