@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/loginFragment">
+
+    <fragment
+        android:id="@+id/instructionsFragment"
+        android:name="com.sjcreatives.shoestore.screens.instructions.InstructionsFragment"
+        android:label="Instructions"
+        tools:layout="@layout/fragment_instructions"/>
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.sjcreatives.shoestore.screens.login.LoginFragment"
+        android:label="Login"
+        tools:layout="@layout/fragment_login"/>
+    <fragment
+        android:id="@+id/shoeDetailFragment"
+        android:name="com.sjcreatives.shoestore.screens.shoedetail.ShoeDetailFragment"
+        android:label="ShoeDetail"
+        tools:layout="@layout/fragment_shoe_detail"/>
+    <fragment
+        android:id="@+id/shoeListingFragment"
+        android:name="com.sjcreatives.shoestore.screens.shoelisting.ShoeListingFragment"
+        android:label="ShoeListing"
+        tools:layout="@layout/fragment_shoe_listing"/>
+    <fragment
+        android:id="@+id/welcomeFragment"
+        android:name="com.sjcreatives.shoestore.screens.welcome.WelcomeFragment"
+        android:label="Welcome"
+        tools:layout="@layout/fragment_welcome"/>
+</navigation>
