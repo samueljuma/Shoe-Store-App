@@ -27,7 +27,11 @@
         android:id="@+id/shoeDetailFragment"
         android:name="com.sjcreatives.shoestore.screens.shoedetail.ShoeDetailFragment"
         android:label="ShoeDetail"
-        tools:layout="@layout/fragment_shoe_detail"/>
+        tools:layout="@layout/fragment_shoe_detail">
+        <action
+            android:id="@+id/action_shoeDetailFragment_to_shoeListingFragment"
+            app:destination="@id/shoeListingFragment" />
+    </fragment>
     <fragment
         android:id="@+id/shoeListingFragment"
         android:name="com.sjcreatives.shoestore.screens.shoelisting.ShoeListingFragment"
@@ -36,6 +40,9 @@
         <action
             android:id="@+id/action_shoeListingFragment_to_shoeDetailFragment"
             app:destination="@id/shoeDetailFragment" />
+        <action
+            android:id="@+id/action_shoeListingFragment_self"
+            app:popUpTo="@id/shoeListingFragment" />
     </fragment>
     <fragment
         android:id="@+id/welcomeFragment"

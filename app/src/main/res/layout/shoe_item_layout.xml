@@ -3,13 +3,13 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:layout_marginTop="6dp"
     android:background="@drawable/shoe_item_bc"
-    android:layout_height="wrap_content"
-    android:layout_margin="10dp">
+    android:layout_height="wrap_content">
 
     <TextView
         android:id="@+id/tv1"
-        style="@style/WhiteText"
+        style="@style/DefaultText"
         android:layout_width="wrap_content"
         android:textStyle="normal|italic"
         android:layout_height="wrap_content"
@@ -20,7 +20,7 @@
     <TextView
         android:layout_marginStart="16dp"
         android:id="@+id/shoe_name_txt"
-        style="@style/WhiteText"
+        style="@style/DefaultText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Air Max 90 "
@@ -30,7 +30,7 @@
     <TextView
         android:layout_marginTop="6dp"
         android:id="@+id/tv2"
-        style="@style/WhiteText"
+        style="@style/DefaultText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Company: "
@@ -41,7 +41,7 @@
     <TextView
         android:layout_marginStart="16dp"
         android:id="@+id/company_text"
-        style="@style/WhiteText"
+        style="@style/DefaultText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Nike"
@@ -50,7 +50,7 @@
 
     <TextView
         android:id="@+id/tv3"
-        style="@style/WhiteText"
+        style="@style/DefaultText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
@@ -64,7 +64,7 @@
     <TextView
         android:layout_marginStart="16dp"
         android:id="@+id/size_text"
-        style="@style/WhiteText"
+        style="@style/DefaultText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="9"
@@ -73,7 +73,7 @@
 
     <TextView
         android:id="@+id/tv4"
-        style="@style/WhiteText"
+        style="@style/DefaultText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="6dp"
@@ -87,7 +87,7 @@
         android:id="@+id/view"
         android:layout_width="match_parent"
         android:layout_height="1dp"
-        android:background="@color/white"
+        android:background="@color/black"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tv4" />
@@ -97,7 +97,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Classic sneaker with visible Air cushioning, perfect for casual wear."
-        style="@style/WhiteText"
+        style="@style/DefaultText"
         android:textStyle="normal"
         android:textSize="16dp"
         android:paddingStart="10dp"
