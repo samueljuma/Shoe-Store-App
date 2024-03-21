@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@drawable/shoe_item_bc"
+    android:layout_height="wrap_content"
+    android:layout_margin="10dp">
+
+    <TextView
+        android:id="@+id/tv1"
+        style="@style/WhiteText"
+        android:layout_width="wrap_content"
+        android:textStyle="normal|italic"
+        android:layout_height="wrap_content"
+        android:text="Shoe Name: "
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:layout_marginStart="16dp"
+        android:id="@+id/shoe_name_txt"
+        style="@style/WhiteText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Air Max 90 "
+        app:layout_constraintBaseline_toBaselineOf="@+id/tv1"
+        app:layout_constraintStart_toEndOf="@+id/tv1" />
+
+    <TextView
+        android:layout_marginTop="6dp"
+        android:id="@+id/tv2"
+        style="@style/WhiteText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Company: "
+        android:textStyle="normal|italic"
+        app:layout_constraintStart_toStartOf="@+id/tv1"
+        app:layout_constraintTop_toBottomOf="@+id/tv1" />
+
+    <TextView
+        android:layout_marginStart="16dp"
+        android:id="@+id/company_text"
+        style="@style/WhiteText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Nike"
+        app:layout_constraintBaseline_toBaselineOf="@+id/tv2"
+        app:layout_constraintStart_toEndOf="@+id/tv2" />
+
+    <TextView
+        android:id="@+id/tv3"
+        style="@style/WhiteText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="Size: "
+        android:textStyle="italic|normal"
+        app:layout_constraintBaseline_toBaselineOf="@+id/company_text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.15"
+        app:layout_constraintStart_toEndOf="@+id/company_text" />
+
+    <TextView
+        android:layout_marginStart="16dp"
+        android:id="@+id/size_text"
+        style="@style/WhiteText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="9"
+        app:layout_constraintBaseline_toBaselineOf="@+id/tv3"
+        app:layout_constraintStart_toEndOf="@+id/tv3" />
+
+    <TextView
+        android:id="@+id/tv4"
+        style="@style/WhiteText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:text="Description"
+        android:textStyle="normal|italic"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/tv2"
+        app:layout_constraintTop_toBottomOf="@+id/tv2" />
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv4" />
+
+    <TextView
+        android:id="@+id/desc_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Classic sneaker with visible Air cushioning, perfect for casual wear."
+        style="@style/WhiteText"
+        android:textStyle="normal"
+        android:textSize="16dp"
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp"
+        app:layout_constraintEnd_toEndOf="@+id/view"
+        app:layout_constraintStart_toStartOf="@+id/view"
+        app:layout_constraintTop_toBottomOf="@+id/view" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
