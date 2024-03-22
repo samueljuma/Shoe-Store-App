@@ -9,11 +9,15 @@ import android.widget.Button
 import android.widget.LinearLayout
 import androidx.navigation.fragment.findNavController
 import com.sjcreatives.shoestore.R
+import com.sjcreatives.shoestore.data.Shoe
 import com.sjcreatives.shoestore.databinding.FragmentShoeListingBinding
+import com.sjcreatives.shoestore.databinding.ShoeItemLayoutBinding
 
 class ShoeListingFragment : Fragment() {
 
     private lateinit var binding: FragmentShoeListingBinding
+
+    private lateinit var shoeItemBinding : ShoeItemLayoutBinding
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -26,10 +30,15 @@ class ShoeListingFragment : Fragment() {
             )
         }
 
-        val rootLayout = binding.shoeListRootView
-        val shoe_item_view = layoutInflater.inflate(R.layout.shoe_item_layout, rootLayout,false)
 
-        rootLayout.addView(shoe_item_view)
+        val rootLayout = binding.shoeListRootView
+
+        shoeItemBinding = ShoeItemLayoutBinding.inflate(layoutInflater, rootLayout, false)
+        val shoe = Shoe("AirMax 90", "Nike", 9,"Classic sneaker with visible Air cushioning, perfect for casual wear.")
+
+        shoeItemBinding.shoe = shoe
+
+        rootLayout.addView(shoeItemBinding.root)
 
         return binding.root
     }
