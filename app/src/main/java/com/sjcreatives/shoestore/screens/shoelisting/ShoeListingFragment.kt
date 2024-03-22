@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.navigation.fragment.findNavController
 import com.sjcreatives.shoestore.R
 import com.sjcreatives.shoestore.databinding.FragmentShoeListingBinding
 
@@ -17,6 +18,11 @@ class ShoeListingFragment : Fragment() {
     ): View? {
         // Inflate the layout for this fragment
         binding = FragmentShoeListingBinding.inflate(layoutInflater, container,false)
+        binding.addFAB.setOnClickListener {
+            findNavController().navigate(
+                ShoeListingFragmentDirections.actionShoeListingFragmentToShoeDetailFragment()
+            )
+        }
         return binding.root
     }
 

@@ -114,18 +114,18 @@
             app:layout_constraintStart_toEndOf="@+id/textView8" />
 
         <Button
-            android:id="@+id/button4"
+            android:id="@+id/saveBtn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Save"
             android:fontFamily="@font/alata"
             android:backgroundTint="#048F12"
-            app:layout_constraintBaseline_toBaselineOf="@+id/button5"
-            app:layout_constraintEnd_toStartOf="@+id/button5"
+            app:layout_constraintBaseline_toBaselineOf="@+id/cancelBtn"
+            app:layout_constraintEnd_toStartOf="@+id/cancelBtn"
             app:layout_constraintStart_toStartOf="@+id/editTextText5" />
 
         <Button
-            android:id="@+id/button5"
+            android:id="@+id/cancelBtn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="10dp"
