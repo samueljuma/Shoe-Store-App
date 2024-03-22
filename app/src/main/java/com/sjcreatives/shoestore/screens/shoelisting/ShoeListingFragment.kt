@@ -32,17 +32,22 @@ class ShoeListingFragment : Fragment() {
                 ShoeListingFragmentDirections.actionShoeListingFragmentToShoeDetailFragment()
             )
         }
-
+        //Observe livedata for list of shoes and display
         myViewModel.listOfShoes.observe(viewLifecycleOwner){shoes ->
             shoes?.let {
                 displayShoes(shoes)
             }
         }
 
+        val shoe = Shoe("AirMax 90", "Nike", 9,"Classic sneaker with visible Air cushioning, perfect for casual wear.")
+        myViewModel.addShoeToList(shoe)
+
+
         return binding.root
     }
 
-    fun displayShoes(shoes: List<Shoe>){
+    //This function displays list of shoes in the list given
+    private fun displayShoes(shoes: List<Shoe>){
         val rootLayout = binding.shoeListRootView
 
         for (shoe in shoes){

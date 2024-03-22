@@ -14,15 +14,18 @@ class MyViewModel : ViewModel() {
         loadListOfShoes()
     }
 
+    //function load available list of shoes
     private fun loadListOfShoes(){
-        val shoes = listOf(
+        val shoes = mutableListOf(
             Shoe("AirMax 90", "Nike", 9,"Classic sneaker with visible Air cushioning, perfect for casual wear."),
-            Shoe("AirMax 90", "Nike", 9,"Classic sneaker with visible Air cushioning, perfect for casual wear."),
-            Shoe("AirMax 90", "Nike", 9,"Classic sneaker with visible Air cushioning, perfect for casual wear."),
-            Shoe("AirMax 90", "Nike", 9,"Classic sneaker with visible Air cushioning, perfect for casual wear."),
-            Shoe("AirMax 90", "Nike", 9,"Classic sneaker with visible Air cushioning, perfect for casual wear."),
+            Shoe("AirMax 90", "Nike", 9,"Classic sneaker with visible Air cushioning, perfect for casual wear.")
         )
         _listOfShoes.value = shoes
+    }
+
+    //function adds new shoe to list
+    fun addShoeToList (shoe: Shoe){
+        _listOfShoes.value = _listOfShoes.value?.plus(shoe)
     }
 
 }

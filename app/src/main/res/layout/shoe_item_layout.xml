@@ -19,7 +19,7 @@
             android:layout_width="wrap_content"
             android:textStyle="normal|italic"
             android:layout_height="wrap_content"
-            tools:text="Shoe Name: "
+            android:text="Shoe Name: "
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
