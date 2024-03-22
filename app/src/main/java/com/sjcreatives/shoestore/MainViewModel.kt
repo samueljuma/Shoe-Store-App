@@ -11,17 +11,17 @@ class MainViewModel : ViewModel(){
         loadListOfShoes()
     }
 
-    private val _list_of_shoes = MutableLiveData<List<Shoe?>>()
+    private val _list_of_shoes = MutableLiveData<List<Shoe>>()
 
-    val list_of_shoes: LiveData<List<Shoe?>> = _list_of_shoes
+    val list_of_shoes: LiveData<List<Shoe>> = _list_of_shoes
 
     private fun loadListOfShoes(){
        val shoeList = listOf(
             Shoe("AirMax 90", "Nike", 9,"Classic sneaker with visible Air cushioning, perfect for casual wear."),
             Shoe("AirMax 90", "Nike", 9,"Classic sneaker with visible Air cushioning, perfect for casual wear.")
         )
-
         _list_of_shoes.value = shoeList
     }
+
 
 }
