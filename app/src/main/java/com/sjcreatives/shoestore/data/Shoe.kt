@@ -1,8 +1,11 @@
 package com.sjcreatives.shoestore.data
 
 data class Shoe(
-    val shoeName: String, // Name of the shoe
-    val company: String, // The shoe Company
-    val size: Int, // Size of the shoe
-    val desc: String // A short description of the shoe
+    /**
+     * Using var (mutable) helps in two-way data binding
+     */
+    var shoeName: String, // Name of the shoe
+    var company: String, // The shoe Company
+    var size: String, // Size of the shoe
+    var desc: String // A short description of the shoe
 )

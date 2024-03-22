@@ -7,8 +7,13 @@ import com.sjcreatives.shoestore.data.Shoe
 
 class MyViewModel : ViewModel() {
 
+    //livedata for the list of shoes
     private val _listOfShoes = MutableLiveData<List<Shoe>>()
     val listOfShoes : LiveData<List<Shoe>> = _listOfShoes
+
+    // livedata for new shoe to be added to list
+    private val _shoe = MutableLiveData<Shoe?>()
+    val shoe : LiveData<Shoe?> = _shoe
 
     init {
         loadListOfShoes()
@@ -17,8 +22,8 @@ class MyViewModel : ViewModel() {
     //function load available list of shoes
     private fun loadListOfShoes(){
         val shoes = mutableListOf(
-            Shoe("AirMax 90", "Nike", 9,"Classic sneaker with visible Air cushioning, perfect for casual wear."),
-            Shoe("AirMax 90", "Nike", 9,"Classic sneaker with visible Air cushioning, perfect for casual wear.")
+            Shoe("AirMax 90", "Nike","9","Classic sneaker with visible Air cushioning, perfect for casual wear."),
+            Shoe("AirMax 90", "Nike", "9","Classic sneaker with visible Air cushioning, perfect for casual wear.")
         )
         _listOfShoes.value = shoes
     }

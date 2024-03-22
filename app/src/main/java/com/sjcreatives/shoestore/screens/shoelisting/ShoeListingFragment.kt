@@ -39,7 +39,7 @@ class ShoeListingFragment : Fragment() {
             }
         }
 
-        val shoe = Shoe("AirMax 90", "Nike", 9,"Classic sneaker with visible Air cushioning, perfect for casual wear.")
+        val shoe = Shoe("AirMax 90", "Nike", "9","Classic sneaker with visible Air cushioning, perfect for casual wear.")
         myViewModel.addShoeToList(shoe)
 
 

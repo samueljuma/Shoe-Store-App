@@ -76,7 +76,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             tools:text="9"
-            android:text="@{String.valueOf(shoe.size)}"
+            android:text="@{shoe.size}"
             app:layout_constraintBaseline_toBaselineOf="@+id/tv3"
             app:layout_constraintStart_toEndOf="@+id/tv3" />
 
