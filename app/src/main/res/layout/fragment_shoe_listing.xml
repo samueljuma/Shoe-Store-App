@@ -25,11 +25,6 @@
                 android:gravity="center"
                 android:layout_height="wrap_content">
 
-                <include layout="@layout/shoe_item_layout"/>
-                <include layout="@layout/shoe_item_layout"/>
-                <include layout="@layout/shoe_item_layout"/>
-
-
             </LinearLayout>
 
         </ScrollView>

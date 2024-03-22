@@ -5,6 +5,8 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
+import android.widget.LinearLayout
 import androidx.navigation.fragment.findNavController
 import com.sjcreatives.shoestore.R
 import com.sjcreatives.shoestore.databinding.FragmentShoeListingBinding
@@ -23,6 +25,12 @@ class ShoeListingFragment : Fragment() {
                 ShoeListingFragmentDirections.actionShoeListingFragmentToShoeDetailFragment()
             )
         }
+
+        val rootLayout = binding.shoeListRootView
+        val shoe_item_view = layoutInflater.inflate(R.layout.shoe_item_layout, rootLayout,false)
+
+        rootLayout.addView(shoe_item_view)
+
         return binding.root
     }
 
