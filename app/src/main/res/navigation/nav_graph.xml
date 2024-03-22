@@ -21,7 +21,10 @@
         tools:layout="@layout/fragment_shoe_detail">
         <action
             android:id="@+id/action_shoeDetailFragment_to_shoeListingFragment"
-            app:destination="@id/shoeListingFragment" />
+            app:destination="@id/shoeListingFragment"
+            app:popUpTo="@id/shoeListingFragment"
+            app:popUpToInclusive="false" />
+        <action android:id="@+id/action_shoeDetailFragment_to_shoeListingFragment2" />
     </fragment>
     <fragment
         android:id="@+id/shoeListingFragment"
@@ -31,14 +34,11 @@
         <action
             android:id="@+id/action_shoeListingFragment_to_shoeDetailFragment"
             app:destination="@id/shoeDetailFragment" />
-        <action
-            android:id="@+id/action_shoeListingFragment_self"
-            app:popUpTo="@id/shoeListingFragment" />
     </fragment>
     <fragment
         android:id="@+id/welcomeFragment"
         android:name="com.sjcreatives.shoestore.screens.welcome.WelcomeFragment"
-        android:label="WelcomeFragment"
+        android:label="Welcome"
         tools:layout="@layout/fragment_welcome">
         <action
             android:id="@+id/action_welcomeFragment_to_instructionsFragment"
@@ -47,10 +47,12 @@
     <fragment
         android:id="@+id/instructionsFragment"
         android:name="com.sjcreatives.shoestore.screens.instructions.InstructionsFragment"
-        android:label="InstructionsFragment"
+        android:label="Instructions"
         tools:layout="@layout/fragment_instructions">
         <action
             android:id="@+id/action_instructionsFragment_to_shoeListingFragment"
-            app:destination="@id/shoeListingFragment" />
+            app:destination="@id/shoeListingFragment"
+            app:popUpTo="@id/loginFragment"
+            app:popUpToInclusive="true" />
     </fragment>
 </navigation>
