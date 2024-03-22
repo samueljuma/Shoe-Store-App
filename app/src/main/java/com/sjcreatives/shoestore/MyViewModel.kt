@@ -12,8 +12,8 @@ class MyViewModel : ViewModel() {
     val listOfShoes : LiveData<List<Shoe>> = _listOfShoes
 
     // livedata for new shoe to be added to list
-    private val _shoe = MutableLiveData<Shoe?>()
-    val shoe : LiveData<Shoe?> = _shoe
+    private val _shoe = MutableLiveData<Shoe>()
+    val shoe : LiveData<Shoe> = _shoe
 
     init {
         loadListOfShoes()

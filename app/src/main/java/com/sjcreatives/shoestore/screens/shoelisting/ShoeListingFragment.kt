@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.activityViewModels
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import com.sjcreatives.shoestore.MyViewModel
@@ -16,7 +17,7 @@ class ShoeListingFragment : Fragment() {
 
     private lateinit var binding: FragmentShoeListingBinding
 
-    private lateinit var myViewModel: MyViewModel
+    private val myViewModel: MyViewModel by activityViewModels()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -24,8 +25,6 @@ class ShoeListingFragment : Fragment() {
     ): View? {
         // Inflate the layout for this fragment
         binding = FragmentShoeListingBinding.inflate(layoutInflater, container,false)
-
-        myViewModel = ViewModelProvider(this)[MyViewModel::class.java]
 
         binding.addFAB.setOnClickListener {
             findNavController().navigate(
@@ -38,10 +37,6 @@ class ShoeListingFragment : Fragment() {
                 displayShoes(shoes)
             }
         }
-
-        val shoe = Shoe("AirMax 90", "Nike", "9","Classic sneaker with visible Air cushioning, perfect for casual wear.")
-        myViewModel.addShoeToList(shoe)
-
 
         return binding.root
     }

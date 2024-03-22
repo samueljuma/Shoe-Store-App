@@ -5,21 +5,17 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Toast
-import androidx.lifecycle.ViewModelProvider
+import androidx.fragment.app.activityViewModels
 import androidx.navigation.fragment.findNavController
 import com.sjcreatives.shoestore.MyViewModel
-import com.sjcreatives.shoestore.R
 import com.sjcreatives.shoestore.data.Shoe
-import com.sjcreatives.shoestore.databinding.FragmentLoginBinding
 import com.sjcreatives.shoestore.databinding.FragmentShoeDetailBinding
 
 class ShoeDetailFragment : Fragment() {
 
     private lateinit var binding: FragmentShoeDetailBinding
 
-    private lateinit var viewModel: MyViewModel
-    private lateinit var newShoe: Shoe
+    private val viewModel: MyViewModel by activityViewModels()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -29,11 +25,15 @@ class ShoeDetailFragment : Fragment() {
         binding = FragmentShoeDetailBinding.inflate(layoutInflater, container, false)
 
         binding.lifecycleOwner = this
+        binding.viewModel = viewModel
 
-        viewModel = ViewModelProvider(this)[MyViewModel::class.java]
-
-
+        viewModel.shoe.observe(viewLifecycleOwner){shoe ->
+            shoe?.let {
+                viewModel.addShoeToList(shoe)
+            }
+        }
         binding.saveBtn.setOnClickListener {
+            viewModel.addShoeToList(getNewShoeDetails())
             findNavController().navigate(
                 ShoeDetailFragmentDirections.actionShoeDetailFragmentToShoeListingFragment()
             )
@@ -45,6 +45,16 @@ class ShoeDetailFragment : Fragment() {
             )
         }
         return binding.root
+    }
+
+    private fun getNewShoeDetails(): Shoe {
+
+        val shoeName = binding.shoeNameEditText.text.toString()
+        val company = binding.companyEditText.text.toString()
+        val size = binding.shoeSizeEditText.text.toString()
+        val desc = binding.descEditText.text.toString()
+
+        return Shoe(shoeName, company, size, desc)
     }
 
 }
