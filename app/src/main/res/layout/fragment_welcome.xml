@@ -9,7 +9,7 @@
         tools:context=".screens.welcome.WelcomeFragment">
 
         <ImageView
-            android:layout_marginTop="60dp"
+            android:layout_marginTop="10dp"
             android:layout_width="60dp"
             android:layout_height="60dp"
             android:src="@drawable/shoe_sneaker"

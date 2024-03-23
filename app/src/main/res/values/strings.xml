@@ -9,4 +9,5 @@
         You will be taken to a shoeList screen from where you can view a list of shoes available in the inventory.
         You can also go ahead to add a shoe to the list by clicking the button in the bottom right corner
         on the shoe list screen. \n That\'s it! </string>
+    <string name="shoe_desc">Classic sneaker with visible Air cushioning, perfect for casual wear.</string>
 </resources>

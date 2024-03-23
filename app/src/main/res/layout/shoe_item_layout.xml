@@ -2,119 +2,136 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
+
     <data>
         <variable
             name="shoe"
             type="com.sjcreatives.shoestore.data.Shoe" />
+
     </data>
+
     <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_marginTop="3dp"
         android:layout_width="match_parent"
-        android:layout_marginTop="6dp"
+        android:layout_height="wrap_content"
         android:background="@drawable/shoe_item_bc"
-        android:layout_height="wrap_content">
+        android:padding="10dp">
 
         <TextView
-            android:id="@+id/tv1"
+            android:id="@+id/textView4"
             style="@style/DefaultText"
             android:layout_width="wrap_content"
-            android:textStyle="normal|italic"
             android:layout_height="wrap_content"
-            android:text="Shoe Name: "
+            android:text="Shoe Name"
+            android:textStyle="normal"
+            app:layout_constraintEnd_toStartOf="@+id/textView5"
+            app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
-            android:layout_marginStart="16dp"
+            android:id="@+id/textView5"
+            style="@style/DefaultText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Company"
+            android:textStyle="normal"
+            app:layout_constraintBaseline_toBaselineOf="@+id/textView4"
+            app:layout_constraintEnd_toStartOf="@+id/textView9"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/textView4" />
+
+        <TextView
+            android:id="@+id/textView9"
+            style="@style/DefaultText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Size"
+            android:textStyle="normal"
+            app:layout_constraintBaseline_toBaselineOf="@+id/textView5"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/textView5" />
+
+        <View
+            android:id="@+id/view3"
+            style="@style/DefaultText"
+            android:layout_width="2dp"
+            android:layout_height="30dp"
+            android:background="@color/color_2"
+            app:layout_constraintBottom_toBottomOf="@+id/shoe_name_txt"
+            app:layout_constraintEnd_toStartOf="@+id/textView5"
+            app:layout_constraintStart_toEndOf="@+id/textView4"
+            app:layout_constraintTop_toTopOf="@+id/textView4" />
+
+        <View
+            android:id="@+id/view4"
+            style="@style/DefaultText"
+            android:layout_width="2dp"
+            android:layout_height="30dp"
+            android:background="@color/color_2"
+            app:layout_constraintBottom_toBottomOf="@+id/company_txt"
+            app:layout_constraintEnd_toStartOf="@+id/textView9"
+            app:layout_constraintStart_toEndOf="@+id/textView5"
+            app:layout_constraintTop_toTopOf="@+id/textView5" />
+
+        <TextView
             android:id="@+id/shoe_name_txt"
             style="@style/DefaultText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            tools:text="Air Max 90 "
             android:text="@{shoe.shoeName}"
-            app:layout_constraintBaseline_toBaselineOf="@+id/tv1"
-            app:layout_constraintStart_toEndOf="@+id/tv1" />
+            tools:text="AirMax 90"
+            app:layout_constraintEnd_toEndOf="@+id/textView4"
+            app:layout_constraintStart_toStartOf="@+id/textView4"
+            app:layout_constraintTop_toBottomOf="@+id/textView4" />
 
         <TextView
-            android:layout_marginTop="6dp"
-            android:id="@+id/tv2"
+            android:id="@+id/company_txt"
             style="@style/DefaultText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Company: "
-            android:textStyle="normal|italic"
-            app:layout_constraintStart_toStartOf="@+id/tv1"
-            app:layout_constraintTop_toBottomOf="@+id/tv1" />
-
-        <TextView
-            android:layout_marginStart="16dp"
-            android:id="@+id/company_text"
-            style="@style/DefaultText"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            tools:text="Nike"
             android:text="@{shoe.company}"
-            app:layout_constraintBaseline_toBaselineOf="@+id/tv2"
-            app:layout_constraintStart_toEndOf="@+id/tv2" />
+            tools:text="Nike"
+            app:layout_constraintEnd_toEndOf="@+id/textView5"
+            app:layout_constraintStart_toStartOf="@+id/textView5"
+            app:layout_constraintTop_toBottomOf="@+id/textView5" />
 
         <TextView
-            android:id="@+id/tv3"
-            style="@style/DefaultText"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:text="Size: "
-            android:textStyle="italic|normal"
-            app:layout_constraintBaseline_toBaselineOf="@+id/company_text"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.15"
-            app:layout_constraintStart_toEndOf="@+id/company_text" />
-
-        <TextView
-            android:layout_marginStart="16dp"
-            android:id="@+id/size_text"
+            android:id="@+id/size_txt"
             style="@style/DefaultText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             tools:text="9"
             android:text="@{shoe.size}"
-            app:layout_constraintBaseline_toBaselineOf="@+id/tv3"
-            app:layout_constraintStart_toEndOf="@+id/tv3" />
+            app:layout_constraintEnd_toEndOf="@+id/textView9"
+            app:layout_constraintStart_toStartOf="@+id/textView9"
+            app:layout_constraintTop_toBottomOf="@+id/textView9" />
 
         <TextView
-            android:id="@+id/tv4"
+            android:id="@+id/textView13"
             style="@style/DefaultText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="6dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="2dp"
             android:text="Description"
-            android:textStyle="normal|italic"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="@+id/tv2"
-            app:layout_constraintTop_toBottomOf="@+id/tv2" />
-
-        <View
-            android:id="@+id/view"
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:background="@color/black"
+            android:textStyle="normal"
+            app:layout_constraintBottom_toTopOf="@+id/desc_txt"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tv4" />
+            app:layout_constraintTop_toBottomOf="@+id/company_txt" />
 
         <TextView
-            android:id="@+id/desc_text"
+            android:id="@+id/desc_txt"
+            style="@style/DefaultText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            tools:text="Classic sneaker with visible Air cushioning, perfect for casual wear."
+            android:gravity="center"
             android:text="@{shoe.desc}"
-            style="@style/DefaultText"
-            android:textStyle="normal"
-            android:textSize="16dp"
-            android:paddingStart="10dp"
-            android:paddingEnd="10dp"
-            app:layout_constraintEnd_toEndOf="@+id/view"
-            app:layout_constraintStart_toStartOf="@+id/view"
-            app:layout_constraintTop_toBottomOf="@+id/view" />
-
+            tools:text="@string/shoe_desc"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView13" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

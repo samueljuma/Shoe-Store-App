@@ -22,8 +22,11 @@ class MyViewModel : ViewModel() {
     //function load available list of shoes
     private fun loadListOfShoes(){
         val shoes = mutableListOf(
-            Shoe("AirMax 90", "Nike","9","Classic sneaker with visible Air cushioning, perfect for casual wear."),
-            Shoe("AirMax 90", "Nike", "9","Classic sneaker with visible Air cushioning, perfect for casual wear.")
+            Shoe("AirMax 90", "Nike","9","Classic Sneaker with visible Air cushioning."),
+            Shoe("Old Skool", "Vans", "8", "Iconic skate shoe with durable construction.")
+//            Shoe("Superstar", "Adidas", "9", "Iconic shell-toe design, versatile for any outfit."),
+//            Shoe("Classic Leather", "Reebok", "9", "Timeless style and comfort for everyday wear.")
+
         )
         _listOfShoes.value = shoes
     }

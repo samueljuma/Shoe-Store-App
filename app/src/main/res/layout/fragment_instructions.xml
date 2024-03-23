@@ -11,7 +11,7 @@
         <ImageView
             android:contentDescription="Logo"
             android:id="@+id/logo"
-            android:layout_marginTop="50dp"
+            android:layout_marginTop="10dp"
             android:layout_width="60dp"
             android:layout_height="60dp"
             android:src="@drawable/shoe_sneaker"
