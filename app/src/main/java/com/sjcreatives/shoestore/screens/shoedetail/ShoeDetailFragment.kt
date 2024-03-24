@@ -32,11 +32,15 @@ class ShoeDetailFragment : Fragment() {
                 viewModel.addShoeToList(shoe)
             }
         }
-        binding.saveBtn.setOnClickListener {
-            viewModel.addShoeToList(getNewShoeDetails())
-            findNavController().navigate(
-                ShoeDetailFragmentDirections.actionShoeDetailFragmentToShoeListingFragment()
-            )
+
+        //Observe livedata for navigating to Shoe List Screen
+        viewModel.navigateToShoeList.observe(viewLifecycleOwner){
+            it?.let {
+                findNavController().navigate(
+                    ShoeDetailFragmentDirections.actionShoeDetailFragmentToShoeListingFragment()
+                )
+                viewModel.onDoneNavigatingToShoeList()
+            }
         }
 
         binding.cancelBtn.setOnClickListener {
@@ -45,16 +49,6 @@ class ShoeDetailFragment : Fragment() {
             )
         }
         return binding.root
-    }
-
-    private fun getNewShoeDetails(): Shoe {
-
-        val shoeName = binding.shoeNameEditText.text.toString()
-        val company = binding.companyEditText.text.toString()
-        val size = binding.shoeSizeEditText.text.toString()
-        val desc = binding.descEditText.text.toString()
-
-        return Shoe(shoeName, company, size, desc)
     }
 
 }

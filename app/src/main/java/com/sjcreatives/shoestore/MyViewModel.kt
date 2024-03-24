@@ -15,6 +15,18 @@ class MyViewModel : ViewModel() {
     private val _shoe = MutableLiveData<Shoe>()
     val shoe : LiveData<Shoe> = _shoe
 
+    //Livedata variable fr navigating to shoeList screen
+    private val _navigateToShoeList = MutableLiveData<Boolean?>()
+    val navigateToShoeList: LiveData<Boolean?> =_navigateToShoeList
+
+    /**
+     * EditTextFields Data
+     */
+     val shoeName = MutableLiveData<String>()
+     val company = MutableLiveData<String>()
+     val shoeSize = MutableLiveData<String>()
+     val shoeDesc = MutableLiveData<String>()
+
     init {
         loadListOfShoes()
     }
@@ -34,6 +46,21 @@ class MyViewModel : ViewModel() {
     //function adds new shoe to list
     fun addShoeToList (shoe: Shoe){
         _listOfShoes.value = _listOfShoes.value?.plus(shoe)
+    }
+
+    fun onSaveClicked() {
+        val newShoe = Shoe(
+            shoeName.value ?: "",
+            company.value ?: "",
+            shoeSize.value ?: "",
+            shoeDesc.value ?: ""
+        )
+        addShoeToList(newShoe)
+        _navigateToShoeList.value = true
+    }
+
+    fun onDoneNavigatingToShoeList(){
+        _navigateToShoeList.value = null
     }
 
 }
