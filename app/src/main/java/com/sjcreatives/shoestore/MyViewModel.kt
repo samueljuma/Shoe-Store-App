@@ -44,7 +44,7 @@ class MyViewModel : ViewModel() {
     }
 
     //function adds new shoe to list
-    fun addShoeToList (shoe: Shoe){
+    private fun addShoeToList (shoe: Shoe){
         _listOfShoes.value = _listOfShoes.value?.plus(shoe)
     }
 
@@ -61,6 +61,15 @@ class MyViewModel : ViewModel() {
 
     fun onDoneNavigatingToShoeList(){
         _navigateToShoeList.value = null
+        resetEditTextValues()
+    }
+
+    //Function Resets all EditText Fields
+    private fun resetEditTextValues(){
+        shoeName.value =""
+        company.value =""
+        shoeSize.value =""
+        shoeDesc.value =""
     }
 
 }

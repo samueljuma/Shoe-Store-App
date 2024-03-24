@@ -27,11 +27,11 @@ class ShoeDetailFragment : Fragment() {
         binding.lifecycleOwner = this
         binding.viewModel = viewModel
 
-        viewModel.shoe.observe(viewLifecycleOwner){shoe ->
-            shoe?.let {
-                viewModel.addShoeToList(shoe)
-            }
-        }
+//        viewModel.shoe.observe(viewLifecycleOwner){shoe ->
+//            shoe?.let {
+//                viewModel.addShoeToList(shoe)
+//            }
+//        }
 
         //Observe livedata for navigating to Shoe List Screen
         viewModel.navigateToShoeList.observe(viewLifecycleOwner){
