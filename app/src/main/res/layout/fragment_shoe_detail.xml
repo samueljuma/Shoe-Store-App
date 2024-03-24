@@ -9,6 +9,8 @@
             type="com.sjcreatives.shoestore.MyViewModel" />
     </data>
 
+    <!-- Constraint layout was perfect for avoiding nested views
+     for the two columns -->
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"

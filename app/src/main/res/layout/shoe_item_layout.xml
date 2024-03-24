@@ -10,6 +10,8 @@
 
     </data>
 
+    <!-- Constraint layout helped achieve the arrangement of
+    the many views for this layout. It also helped to avoid nested viewgroups-->
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_marginTop="3dp"
         android:layout_width="match_parent"

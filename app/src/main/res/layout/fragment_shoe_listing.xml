@@ -3,6 +3,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
+    <!-- Constraint layout was perfect for positioning the
+    FloatingActionButton at the right bottom corner-->
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -17,6 +19,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent">
 
+            <!-- This layout would be a perfect root_view for adding views in a scrollview -->
             <LinearLayout
                 android:id="@+id/shoe_list_root_view"
                 android:layout_width="match_parent"
